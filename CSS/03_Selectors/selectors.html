@@ -38,14 +38,47 @@
         }
 
         /* 6.Descendant Selectors */
-        
+        article p{
+            font-style: italic;
+            background-color: #1a1a1a;
+            color: azure;
+            padding: 10px;
+        }
 
         /* 7.Child Selectors */
-        /* 8.Universal Selectors */
-        /* 9.Universal Selectors */
-        /* 10.Universal Selectors */
-        /* 11.Universal Selectors */
-        /* 12.Universal Selectors */
+        div > p{
+           background-color: #ff5a5a; 
+        }
+        
+
+        /* 8.Adjacent sibling selectors */
+        h1 + p{
+            font-weight: bold;
+        }
+
+        /* 9.general Sibling Selectors */
+        h2 ~ p{
+            color: chartreuse;
+        }
+        /* 10.Pseudo-class Selectors */
+        a:hover{
+            background-color: #acc51f;
+            text-decoration: none;
+            color: #1a1a1a;
+            padding : 5px;
+            margin: 4px;
+        }
+
+        /* 11.pseudo-element Selectors */
+        p::first-letter{
+            font-weight: 30px;
+        }
+
+        /* 12.Grouping Selectors */
+
+        h1, h2, h3 {
+            color: #ff5a5a;
+        }
         
     </style>
 </head>
