@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selcectors</title>
+    <style>
+        /* 1.Universal Selectors */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+
+        /* 2.Type Selector */
+        p {
+            /* font-size: 16px;
+            margin: 10px 20px 10px 20px; */
+            /* padding: 1px 2px ; */
+            margin-bottom: 10px;
+        }
+
+        /* 3.Class selector */
+        .highlight{
+            background-color: #3f7edd;
+        }
+
+        /* 4.Id selectors */
+        #header{
+            background-color: #ff6f6f;
+        }
+
+        /* 5.Attribution Selectors */
+        input[type = "text"]{
+            border: 2px solid #6187ce;
+        }
+
+        /* 6.Descendant Selectors */
+        
+
+        /* 7.Child Selectors */
+        /* 8.Universal Selectors */
+        /* 9.Universal Selectors */
+        /* 10.Universal Selectors */
+        /* 11.Universal Selectors */
+        /* 12.Universal Selectors */
+        
+    </style>
+</head>
+<body>
+    <header id="header">this is a header</header>
+    <h1>Main Heading</h1>
+    <p>
+        This paragraph is adjacent to h1 and Demonstrates the adjacent sibling selector.
+    </p>
+    <p>this is a regular paragraph showing the type selectors</p>
+
+    <p class="highlight">
+        This Paragraph ha a highlight class and demonstrates the class selector.
+    </p>
+    <input type="text" placeholder="This is a text input field" />
+    <article>
+        <p>
+            this paragraph is inside an article, showing the descendant selectors
+        </p>
+    </article>
+    <ul>
+        <li>
+            Direct Child list item
+        </li>
+        <li>
+            <ul>
+                <li>
+                    this is not a direct child of the first ul
+                </li>
+            </ul>
+        </li>
+    </ul>
+<h2>Sub Heading</h2>
+<p>
+    this is a siblibg paragraph to h2, demonstrates the general sibling selector.
+</p>
+<a href="#">Hover over me to see the pseudo-class selector in action</a>
+<p>
+    this paragraph demostrates pseudo-element selectors with a styled first
+    line and first letter.
+</p>
+<h3>Heading 3</h3>
+<p>
+    The headings h1,h2, and h3 use the grouping selector for consistent font family.
+</p>
+</body>
+</html>
