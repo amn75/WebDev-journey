@@ -29,7 +29,6 @@
         padding: 0;
         display: flex;
         justify-content: space-around;
-        
       }
       .nav1 li {
         display: inline;
@@ -42,7 +41,7 @@
         border-radius: 4px;
         position: relative;
       }
-      .nav1 a::after{
+      .nav1 a::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -53,7 +52,7 @@
         transform: scaleX(0);
         transition: transform 0.3s ease-in-out;
       }
-      .nav1 a:hover::after{
+      .nav1 a:hover::after {
         transform: scaleX(1);
       }
       .nav1 .login-btn {
@@ -62,32 +61,31 @@
         border: none;
         padding: 5px 10px;
         border-radius: 4px;
-        cursor:crosshair;
+        cursor: crosshair;
       }
-      .nav2{
+      .nav2 {
         background-color: #a9fff8;
         width: 200px;
         padding: 20px;
       }
-      .nav2 ul{
+      .nav2 ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        
       }
-      .nav2 li{
+      .nav2 li {
         margin-bottom: 12px;
       }
-      .nav2 a{
+      .nav2 a {
         text-decoration: none;
         color: #1a1a1a;
         padding: 10px;
         display: block;
       }
-      .nav2 a:hover{
+      .nav2 a:hover {
         background-color: #005d69;
       }
-      .nav2 .login-btn{
+      .nav2 .login-btn {
         background-color: #146f75;
         color: #ffffff;
         border: none;
@@ -95,9 +93,57 @@
         padding: 10px;
         cursor: pointer;
       }
-      .nav2 .login-btn:hover{
+      .nav2 .login-btn:hover {
         background-color: #0f5a60;
       }
+      .nav3 {
+  background-color: #eb779e;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative; /* Ensure navbar is positioned for absolute children */
+}
+.nav3 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav3 a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  display: block;
+}
+.nav3 .dropdown {
+  position: relative; /* Needed for absolute dropdown-content */
+}
+.nav3 .dropdown-content {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 100%; /* Directly under the parent */
+  background-color: #5e1c37;
+  border-radius: 8px;
+  min-width: 150px;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 10;
+  pointer-events: none;
+}
+.nav3 .dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.nav3 .login-btn{
+  background-color: #f89696;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
     </style>
   </head>
   <body>
@@ -113,15 +159,33 @@
       </nav>
     </div>
     <div>
-        <h2>Variation 2: Vertical with hover effect</h2>
-        <nav class="nav2">
-            <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Products</a></li>
-            <li><button class="login-btn">Login</button></li>
-            </ul>
-        </nav>
+      <h2>Variation 2: Vertical with hover effect</h2>
+      <nav class="nav2">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+    <div>
+      <h2>Variation 3: Horizontal with Dropdown</h2>
+      <nav class="nav3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">About</a>
+            <div class="dropdown-content">
+              <a href="#">Our Story</a>
+              <a href="#">Team</a>
+              <a href="#">Contact</a>
+            </div>
+          </li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
     </div>
   </body>
 </html>
