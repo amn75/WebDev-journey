@@ -1,47 +1,62 @@
-body, html{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
 }
 
 .container {
-    background: linear-gradient(to right, #f06, #4a90e2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  background: linear-gradient(to right, #f06, #4a90e2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
-.content{
-    text-align: center;
-    background-color: rgba(255, 140, 247, 0.379);
-    padding: 2rem;
-    color: #ffffff;
-    border-radius: 10px;
-    max-width: 450px;
+.content {
+  text-align: center;
+  background-color: rgba(255, 140, 247, 0.379);
+  padding: 2rem;
+  color: #ffffff;
+  border-radius: 10px;
+  max-width: 450px;
 }
-.logo{
-    width: 450px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
+.logo {
+  width: 450px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
 }
-h1{
-    color: #ffffff;
-    margin-bottom: 20px;
+h1 {
+  color: #ffffff;
+  margin-bottom: 20px;
 }
-p{
-    color: #ffffff;
-    margin-bottom: 20px;
+p {
+  color: #ffffff;
+  margin-bottom: 20px;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    border: none;
+form {
+  display: flex;
+  flex-direction: column;
+  border: none;
 }
-input[type="email"]{
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    margin-bottom: 10px;
+input[type="email"] {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 10px;
+}
+.notify_btn {
+  background-color: #ff0073;
+  color: #ffffff;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.211);
+  transition: background-color 0.3s ease-in-out;
+}
+.notify_btn:hover {
+  background-color: #e60066;
 }
