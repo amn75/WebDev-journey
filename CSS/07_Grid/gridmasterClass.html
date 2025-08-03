@@ -1,25 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Grid Masterclass Demo</title>
-
-</head>
-<body>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f0f0f0;
+        margin: 0;
+      }
+      .box:nth-child(even) {
+        background-color: #d13d49;
+      }
+      h1,
+      h2 {
+        color: #333;
+      }
+      .container {
+        background-color: #cacaca;
+        border: 2px solid #333;
+        margin-bottom: 20px;
+        padding: 10px;
+      }
+      .box {
+        background-color: #1900ff;
+        color: rgb(255, 255, 255);
+        padding: 20px;
+        font-size: 18px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .grid-container {
+        background-color: #b4b4b4;
+        padding: 10px;
+        display: grid;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Grid MasterClass Demo</h1>
     <div class="container">
-        <h1>Basic Grid 3x3</h1>
-        <div class="grid-container">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-            <div class="box">6</div>
-            <div class="box">7</div>
-            <div class="box">8</div>
-            <div class="box">9</div>
-        </div>
+      <h2>Basic Grid 3x3</h2>
+      <div
+        class="grid-container"
+        style="
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 100px);
+        "
+      >
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+      </div>
     </div>
-</body>
+    <div class="container">
+      <h2>Grid with Different Column Sizes</h2>
+      <div class="grid-container" style="grid-template-columns: 1fr 2fr 1fr;"
+      >
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </div>
+  </body>
 </html>
