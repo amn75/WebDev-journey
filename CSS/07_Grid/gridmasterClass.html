@@ -45,7 +45,7 @@
   <body>
     <h1>CSS Grid MasterClass Demo</h1>
     <div class="container">
-      <h2>Basic Grid 3x3</h2>
+      <h2>1.Basic Grid 3x3</h2>
       <div
         class="grid-container"
         style="
@@ -65,17 +65,19 @@
       </div>
     </div>
     <div class="container">
-      <h2>Grid with Different Column Sizes</h2>
-      <div class="grid-container" style="grid-template-columns: 1fr 2fr 1fr;"
-      >
+      <h2>2.Grid with Different Column Sizes</h2>
+      <div class="grid-container" style="grid-template-columns: 1fr 2fr 1fr">
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
       </div>
     </div>
     <div class="container">
-      <h2>Grid with Gaps</h2>
-      <div class="grid-container" style="grid-template-columns: repeat(3 ,1fr); gap: 20px;">
+      <h2>3.Grid with Gaps</h2>
+      <div
+        class="grid-container"
+        style="grid-template-columns: repeat(3, 1fr); gap: 20px"
+      >
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
@@ -83,5 +85,23 @@
         <div class="box">5</div>
         <div class="box">6</div>
       </div>
+    </div>
+    <div class="container">
+      <h2>4. Grid with placement</h2>
+      <div
+        class="grid-container"
+        style="
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 100px);
+          gap: 10px;
+        "
+      >
+        <div class="box" style="grid-column: 1/3; grid-row: 1/3;" >1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box" style="grid-column: 2/4;">5</div>
+      </div>
+    </div>
   </body>
 </html>
