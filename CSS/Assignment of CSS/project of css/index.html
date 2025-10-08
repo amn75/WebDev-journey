@@ -7,7 +7,7 @@
     <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
-        background-color: #111;
+        background-color: #3a3a3a;
         margin: 0;
         padding: 0;
         height: 100vh;
@@ -40,17 +40,24 @@
 
       .ytcard {
         position: relative; /* Enables positioning of child elements */
-        background: none; /* Remove background color */
-        border: none; /* Remove border */
+        
+        border: none; Remove border
         overflow: hidden; /* Ensures content stays within the card */
-        width: 1280px;
-        height: 750px; 
+        width: 100%;
+        height: 100%; 
+      }
+
+      .ytThumb {
+        width: 100%;
+        height: 350px; 
+        overflow: hidden; 
+        border-radius: 8px;
       }
 
       .ytThumb img {
         width: 100%;
-        height: 100%; /* Makes the image fill the card */
-        object-fit: cover; /* Ensures the image scales properly */
+        height: 100%;
+        object-fit: cover; /* Ensures the image scales and fills the container */
       }
 
       .watch-btn {
@@ -111,7 +118,7 @@
       <div class="ytcard">
         <div class="ytThumb">
           <img
-            src="https://i.ytimg.com/vi/LXZw4tM9l0A/maxresdefault.jpg"
+            src="https://i.ytimg.com/vi/g1wr0DfV73E/maxresdefault.jpg"
             alt="Piastri.exe"
           />
         </div>
