@@ -35,36 +35,33 @@
         display: flex;
         justify-content: space-between;
         gap: 30px;
-        position: relative; /* Enables positioning of the button relative to the cards */
+        width: 90%;
+        flex-wrap: wrap; 
       }
 
       .ytcard {
-        position: relative; /* Enables positioning of child elements */
-        
-        border: none; Remove border
-        overflow: hidden; /* Ensures content stays within the card */
-        width: 100%;
-        height: 100%; 
+        position: relative;
+        width: 30%;
       }
 
       .ytThumb {
         width: 100%;
         height: 350px; 
-        overflow: hidden; 
+        overflow: hidden;
         border-radius: 8px;
       }
 
       .ytThumb img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Ensures the image scales and fills the container */
+        object-fit: cover; 
       }
 
       .watch-btn {
-        position: absolute; /* Position the button over the first card */
-        top: 50%; /* Adjust vertical position */
-        left: 10%; /* Adjust horizontal position */
-        transform: translate(-50%, -50%); /* Center the button */
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
         background: #234b7b;
         color: #fff;
         border: none;
@@ -77,8 +74,10 @@
 
       .watch-btn:hover {
         background: #d63565;
-        transition: background-color 0.6s ease, transform 0.6s ease;
-        transform: scale(1.5);
+        transition: background-color 0.3s ease;
+        transform: scale(1.07);
+        transform-origin: center;
+        transform: rotateX('-100deg');
       }
 
       .cr {
@@ -90,6 +89,21 @@
         padding: 10px;
         font-size: 1.2rem;
         width: 90%;
+      }
+
+      @media (max-width: 768px) {
+        .ytcards {
+          flex-direction: column; 
+          gap: 20px; 
+        }
+
+        .ytcard {
+          width: 100%; 
+        }
+
+        .ytThumb {
+          height: 250px; 
+        }
       }
     </style>
   </head>
